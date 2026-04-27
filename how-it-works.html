@@ -51,9 +51,62 @@
   .cta-btn { background: #fff; color: var(--green-deep); border-radius: 8px; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 500; font-family: var(--font-body); text-decoration: none; display: inline-block; }
   .cta-btn:hover { background: var(--green-light); }
   @media (max-width: 560px) { .learn-grid { grid-template-columns: 1fr; } .hero-heading { font-size: 1.5rem; } .log-row { flex-direction: column; gap: 0.2rem; } }
+
+<style>
+.site-nav {
+  background: #085041;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px;
+}
+.site-nav ul li a {
+  display: block;
+  color: #E1F5EE;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.85rem 0.9rem;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.site-nav ul li a:hover,
+.site-nav ul li a.active {
+  background: #0F6E56;
+  color: #ffffff;
+}
+@media (max-width: 600px) {
+  .site-nav ul li a { font-size: 0.75rem; padding: 0.7rem 0.6rem; }
+}
+</style>
 </style>
 </head>
 <body>
+<nav class="site-nav">
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about-julie.html">About Julie</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="home-adaptation.html">Home Adaptation</a></li>
+    <li><a href="school-consultation.html">School Consultation</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="get-started.html">Get Started</a></li>
+  </ul>
+</nav>
+
 <div class="page">
   <div class="hero">
     <div class="hero-badge">

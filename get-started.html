@@ -52,9 +52,62 @@
   .cta-bar h2 { font-family: var(--font-serif); font-size: 1.3rem; color: #fff; font-weight: 500; margin-bottom: 0.5rem; }
   .cta-bar p { font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
   @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } .hero-heading { font-size: 1.5rem; } }
+
+<style>
+.site-nav {
+  background: #085041;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 960px;
+}
+.site-nav ul li a {
+  display: block;
+  color: #E1F5EE;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.85rem 0.9rem;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.site-nav ul li a:hover,
+.site-nav ul li a.active {
+  background: #0F6E56;
+  color: #ffffff;
+}
+@media (max-width: 600px) {
+  .site-nav ul li a { font-size: 0.75rem; padding: 0.7rem 0.6rem; }
+}
+</style>
 </style>
 </head>
 <body>
+<nav class="site-nav">
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about-julie.html">About Julie</a></li>
+    <li><a href="how-it-works.html">How It Works</a></li>
+    <li><a href="home-adaptation.html">Home Adaptation</a></li>
+    <li><a href="school-consultation.html">School Consultation</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="get-started.html">Get Started</a></li>
+  </ul>
+</nav>
+
 <div class="page">
   <div class="hero">
     <div class="hero-badge">
@@ -78,7 +131,7 @@
   </div>
 
   <div class="form-card">
-    <h2>Tell me about your family</h2>
+    <form action="https://api.web3forms.com/submit" method="POST"><h2>Tell me about your family</h2>
     <p class="form-sub">The more you can share, the better prepared Julie will be for your intro call.</p>
 
     <div class="form-row">
@@ -124,8 +177,9 @@
       <textarea placeholder="Tell me about your child — what's been challenging, what you've tried, and what you're hoping consultation might help with. There's no wrong answer here."></textarea>
     </div>
 
-    <button class="submit-btn">Send My Inquiry to Julie</button>
+    <input type="hidden" name="access_key" value="b500f54a-3ea4-4a2f-8f9b-0224ac2f0c2d"><input type="hidden" name="subject" value="New Inquiry from OT-FamilyCollab Website"><input type="hidden" name="redirect" value="false"><button class="submit-btn" type="submit">Send My Inquiry to Julie</button>
     <p class="form-note">Julie personally reads every submission and responds within 48 hours. Your information is kept completely private.</p>
+  </form>
   </div>
 
   <div class="sliding-scale">
