@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OT-FamilyCollab — Expert OT Guidance for Parents of Neurodiverse Children</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-deep: #085041; --green-mid: #0F6E56; --green-bright: #1D9E75;
+    --green-light: #E1F5EE; --green-pale: #F2FAF7;
+    --text-primary: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --border: #e0e0e0; --bg: #ffffff; --bg-soft: #fafaf8;
+    --radius: 12px; --font-body: 'DM Sans', sans-serif; --font-serif: 'Lora', serif;
+  }
+  body { font-family: var(--font-body); color: var(--text-primary); background: var(--bg); line-height: 1.7; }
+  .page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+  .hero { background: var(--green-pale); border-radius: var(--radius); padding: 2.5rem 2rem; margin-bottom: 2.5rem; border: 1px solid #c8ead9; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--green-light); border: 1px solid #b6dfd2; border-radius: 999px; padding: 0.35rem 1rem; margin-bottom: 1.5rem; }
+  .hero-badge-num { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; color: var(--green-mid); line-height: 1; }
+  .hero-badge-text { font-size: 0.78rem; color: var(--green-deep); line-height: 1.3; }
+  .hero-heading { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 500; color: var(--green-deep); line-height: 1.3; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 0.97rem; color: var(--text-secondary); line-height: 1.75; }
+  .pain-block { margin-bottom: 2.5rem; }
+  .pain-block h2 { font-family: var(--font-serif); font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem; }
+  .pain-q { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.85rem 1rem; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; }
+  .pain-q::before { content: '?'; color: var(--green-mid); font-family: var(--font-serif); font-size: 1.1rem; font-weight: 500; flex-shrink: 0; }
+  .promise { border-left: 3px solid var(--green-bright); margin: 0 0 2.5rem; padding: 1rem 1.5rem; background: var(--green-pale); border-radius: 0 var(--radius) var(--radius) 0; }
+  .promise-label { font-size: 0.78rem; font-weight: 500; color: var(--green-mid); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+  .promise p { font-family: var(--font-serif); font-size: 1.05rem; color: var(--green-deep); font-style: italic; line-height: 1.7; }
+  .promise cite { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: normal; }
+  .gains-section { margin-bottom: 2.5rem; }
+  .gains-section h2 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; }
+  .gains-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .gain-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
+  .gain-icon { font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .gain-title { font-size: 0.88rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.25rem; }
+  .gain-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; }
+  .ot-block { background: var(--bg-soft); border: 1px solid var(--border); border-left: 3px solid var(--green-mid); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; }
+  .ot-block h2 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--green-deep); margin-bottom: 0.6rem; }
+  .ot-block p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+  .cta-bar { background: var(--green-mid); border-radius: var(--radius); padding: 2rem; text-align: center; }
+  .cta-bar h2 { font-family: var(--font-serif); font-size: 1.4rem; color: #fff; font-weight: 500; margin-bottom: 0.6rem; }
+  .cta-bar p { font-size: 0.92rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-btn { background: #fff; color: var(--green-deep); border-radius: 8px; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 500; font-family: var(--font-body); text-decoration: none; display: inline-block; }
+  .cta-btn:hover { background: var(--green-light); }
+  @media (max-width: 560px) { .gains-grid { grid-template-columns: 1fr; } .hero-heading { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-num">OT</span>
+      <span class="hero-badge-text">Expert Guidance<br>For Families</span>
+    </div>
+    <h1 class="hero-heading">Are you frustrated at not seeing results from your child's OT?</h1>
+    <p class="hero-sub">You are not alone — and you are not powerless. <span style="white-space:nowrap;">OT-FamilyCollab</span> puts you inside the process, not in the waiting room. Together we'll build a personalized, parent-powered toolkit so your child can grow and thrive in real life every day — not just in the clinic or school therapy time once a week.</p>
+  </div>
+  <div class="pain-block">
+    <h2>Does any of this sound familiar?</h2>
+    <div class="pain-q">Are you disillusioned at not seeing results from your child's OT sessions at school or at the clinic?</div>
+    <div class="pain-q">Are you confused about what the OT is actually doing with your child — and why?</div>
+    <div class="pain-q">Do you feel like you're spinning your wheels trying to find effective help?</div>
+    <div class="pain-q">Are you tired of driving to and from the clinic every week while wondering if your child's therapy is making a difference in their development?</div>
+    <div class="pain-q">Do you wish you could learn and use carryover activities and strategies that you can use at home that compliment therapeutic methods used at the clinic and school?</div>
+    <div class="pain-q">Do you feel confused and overwhelmed during IEP meetings and struggle to ask clarifying questions and give your opinions?</div>
+  </div>
+  <div class="promise">
+    <div class="promise-label">My commitment to you</div>
+    <p>"When a parent understands their child's OT experience — through the lens of an OT practitioner, the mystery of OT intervention is lifted and the why and how is better understood."</p>
+    <cite>— Julie Elizabeth Driscoll, MA, OTR/L</cite>
+  </div>
+  <div class="gains-section">
+    <h2>What you'll walk away with</h2>
+    <div class="gains-grid">
+      <div class="gain-card"><div class="gain-icon">🧠</div><div class="gain-title">Real Understanding</div><div class="gain-desc">Finally know what OT is doing and why — in plain language you can make sense of.</div></div>
+      <div class="gain-card"><div class="gain-icon">🛠️</div><div class="gain-title">Your Personal Toolbox</div><div class="gain-desc">A curated set of strategies built specifically for your child's profile and your family's real life.</div></div>
+      <div class="gain-card"><div class="gain-icon">💪</div><div class="gain-title">Confidence &amp; Agency</div><div class="gain-desc">Walk into IEP meetings prepared, ask the right questions, and advocate without fear.</div></div>
+      <div class="gain-card"><div class="gain-icon">⏱️</div><div class="gain-title">Time &amp; Money Back</div><div class="gain-desc">Less driving, less waiting. More doing — with your child, in real life, right now.</div></div>
+      <div class="gain-card"><div class="gain-icon">🌱</div><div class="gain-title">Lasting Progress</div><div class="gain-desc">Parent-OT collaboration generates lasting effective methods to use daily with your child.</div></div>
+      <div class="gain-card"><div class="gain-icon">🤝</div><div class="gain-title">A Real Partner</div><div class="gain-desc">Someone in your corner who speaks both OT and parent — for every step of the journey.</div></div>
+    </div>
+  </div>
+  <div class="ot-block">
+    <h2>What Occupational Therapy Really Is</h2>
+    <p>Occupational therapy is singular among allied health professions — it evaluates, observes, teaches, adapts, and modifies how a child functions across every real-world situation. OT looks at the whole child: how their brain processes sensation, how they plan and execute tasks, how they regulate their emotions, and how all of that connects to daily life. OTs connect the dots across brain function like no other discipline can.</p>
+  </div>
+  <div class="cta-bar">
+    <h2>Ready to stop guessing and start knowing?</h2>
+    <p>The free intro call is 20 minutes, no obligation, and designed to see if we're the right fit. Let's talk about your child.</p>
+    <a class="cta-btn" href="get-started.html">Book your free intro call →</a>
+  </div>
+</div>
+</body>
+</html>

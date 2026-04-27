@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>What Families & Colleagues Say — OT-FamilyCollab</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-deep: #085041; --green-mid: #0F6E56; --green-bright: #1D9E75;
+    --green-light: #E1F5EE; --green-pale: #F2FAF7;
+    --text-primary: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --border: #e0e0e0; --bg: #ffffff; --bg-soft: #fafaf8;
+    --radius: 12px; --font-body: 'DM Sans', sans-serif; --font-serif: 'Lora', serif;
+  }
+  body { font-family: var(--font-body); color: var(--text-primary); background: var(--bg); line-height: 1.7; }
+  .page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+
+  /* Hero */
+  .hero { background: var(--green-pale); border-radius: var(--radius); padding: 2.5rem 2rem; margin-bottom: 2.5rem; border: 1px solid #c8ead9; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--green-light); border: 1px solid #b6dfd2; border-radius: 999px; padding: 0.35rem 1rem; margin-bottom: 1.5rem; }
+  .hero-badge-num { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; color: var(--green-mid); line-height: 1; }
+  .hero-badge-text { font-size: 0.78rem; color: var(--green-deep); line-height: 1.3; }
+  .hero-heading { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 500; color: var(--green-deep); line-height: 1.3; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 0.97rem; color: var(--text-secondary); line-height: 1.75; }
+
+  /* Section label */
+  .section-label { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-mid); margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--green-light); }
+
+  /* Featured testimonial */
+  .testi-featured { background: var(--green-pale); border: 1px solid #c8ead9; border-radius: var(--radius); padding: 2rem; margin-bottom: 1rem; }
+  .testi-featured .quote-mark { font-family: var(--font-serif); font-size: 3.5rem; color: var(--green-light); line-height: 0.5; display: block; margin-bottom: 1rem; }
+  .testi-featured blockquote { font-family: var(--font-serif); font-size: 1.05rem; font-style: italic; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
+  .testi-meta { border-top: 1px solid #c8ead9; padding-top: 1rem; }
+  .testi-name { font-weight: 500; color: var(--green-deep); font-size: 0.95rem; }
+  .testi-role { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+  /* Standard testimonial card */
+  .testi-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; margin-bottom: 0.75rem; }
+  .testi-card .quote-mark { font-family: var(--font-serif); font-size: 3rem; color: var(--green-light); line-height: 0.5; display: block; margin-bottom: 0.85rem; }
+  .testi-card blockquote { font-family: var(--font-serif); font-size: 0.98rem; font-style: italic; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; }
+  .testi-card .testi-meta { border-top: 1px solid var(--border); padding-top: 0.85rem; }
+  .testi-card .testi-name { font-weight: 500; color: var(--green-deep); font-size: 0.9rem; }
+  .testi-card .testi-role { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.1rem; }
+
+  .section-group { margin-bottom: 2.5rem; }
+
+  /* CTA */
+  .cta-bar { background: var(--green-mid); border-radius: var(--radius); padding: 2rem; text-align: center; margin-top: 2.5rem; }
+  .cta-bar h2 { font-family: var(--font-serif); font-size: 1.4rem; color: #fff; font-weight: 500; margin-bottom: 0.6rem; }
+  .cta-bar p { font-size: 0.92rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-btn { background: #fff; color: var(--green-deep); border-radius: 8px; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 500; font-family: var(--font-body); text-decoration: none; display: inline-block; }
+  .cta-btn:hover { background: var(--green-light); }
+  @media (max-width: 560px) { .hero-heading { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-num">OT</span>
+      <span class="hero-badge-text">Expert Guidance<br>For Families</span>
+    </div>
+    <h1 class="hero-heading">What Families &amp; Colleagues Say</h1>
+    <p class="hero-sub">These are the voices of parents, educators, and fellow therapists who have worked alongside Julie throughout her career.</p>
+  </div>
+
+  <!-- A Parent's Story -->
+  <div class="section-group">
+    <div class="section-label">A Parent's Story</div>
+    <div class="testi-featured">
+      <span class="quote-mark">"</span>
+      <blockquote>Julie is not just an OT — she is a mom, an advocate, a cheerleader, and a champion for our children. When my son had to transfer to a new school I was beside myself. In my first team meeting, Julie was there — and what a difference she made. I knew from how she spoke about my son that he was not another file or number. She saw my son for the gift that he is. As a mom who has been on this ASD journey for 14 years, she is simply a godsend. Every child deserves the opportunity to have Julie as their therapist. It is clear to me that this is not just a job — it is her purpose and assignment here on earth.</blockquote>
+      <div class="testi-meta">
+        <div class="testi-name">Menrika Cherenfant</div>
+        <div class="testi-role">Parent of a child with ASD</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- From Parents -->
+  <div class="section-group">
+    <div class="section-label">From Parents</div>
+
+    <div class="testi-card">
+      <span class="quote-mark">"</span>
+      <blockquote>What I find most remarkable about Julie's work is her ability to understand and study each child's specific needs and meet those needs in the most engaging way possible.</blockquote>
+      <div class="testi-meta">
+        <div class="testi-name">Courtney B. Keilty</div>
+        <div class="testi-role">Preschool Educator and Director</div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="quote-mark">"</span>
+      <blockquote>My daughter always looks forward to Julie's OT visits. The sessions have been very helpful for her sensory and fine motor issues. Julie genuinely cares about our daughter's overall well-being and has provided OT strategies she can use in her daily life. We continue to see improvement and can't thank Julie enough.</blockquote>
+      <div class="testi-meta">
+        <div class="testi-name">Ylva Humes</div>
+        <div class="testi-role">Parent</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- From Educators & Colleagues -->
+  <div class="section-group">
+    <div class="section-label">From Educators &amp; Colleagues</div>
+
+    <div class="testi-card">
+      <span class="quote-mark">"</span>
+      <blockquote>Julie Driscoll is a consummate professional who throughout her career has brought the highest level of care and expertise to children ranging in age from six months to 18 years. Her enthusiasm, knowledge, and passion for bettering the lives of all the children she treats is respected, appreciated, and commendable.</blockquote>
+      <div class="testi-meta">
+        <div class="testi-name">Paula A. Brackett</div>
+        <div class="testi-role">Educator</div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="quote-mark">"</span>
+      <blockquote>Julie's strengths are broad. She is an effective therapist and collaborator. Her relationship with students, colleagues, and parents is strong. She is highly approachable, professional, and a strong advocate for her students. The breadth of knowledge she possesses strongly impacts her students as they meet the demands of school and life.</blockquote>
+      <div class="testi-meta">
+        <div class="testi-name">Cindy Elias De Koster</div>
+        <div class="testi-role">Special Educator</div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="quote-mark">"</span>
+      <blockquote>Julie is able to take a complex student situation and explain it to parents and educators in ways that are understandable and informative. I have witnessed firsthand a parent break down in tears as Julie showed them the progress their child had made. She takes into consideration the child as an individual — their sensory needs — and translates that into effective treatment.</blockquote>
+      <div class="testi-meta">
+        <div class="testi-name">Lorri Warren, MSPT</div>
+        <div class="testi-role">Physical Therapist</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-bar">
+    <h2>Ready to start your OT-FamilyCollab Journey?</h2>
+    <a class="cta-btn" href="get-started.html">Book your free intro call →</a>
+  </div>
+
+</div>
+</body>
+</html>

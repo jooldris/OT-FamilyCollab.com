@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Get Started — OT-FamilyCollab</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-deep: #085041; --green-mid: #0F6E56; --green-bright: #1D9E75;
+    --green-light: #E1F5EE; --green-pale: #F2FAF7;
+    --text-primary: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --border: #e0e0e0; --bg: #ffffff; --bg-soft: #fafaf8;
+    --radius: 12px; --font-body: 'DM Sans', sans-serif; --font-serif: 'Lora', serif;
+  }
+  body { font-family: var(--font-body); color: var(--text-primary); background: var(--bg); line-height: 1.7; }
+  .page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+  .hero { background: var(--green-pale); border-radius: var(--radius); padding: 2.5rem 2rem; margin-bottom: 2.5rem; border: 1px solid #c8ead9; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--green-light); border: 1px solid #b6dfd2; border-radius: 999px; padding: 0.35rem 1rem; margin-bottom: 1.5rem; }
+  .hero-badge-num { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; color: var(--green-mid); line-height: 1; }
+  .hero-badge-text { font-size: 0.78rem; color: var(--green-deep); line-height: 1.3; }
+  .hero-heading { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 500; color: var(--green-deep); line-height: 1.3; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 0.97rem; color: var(--text-secondary); line-height: 1.75; }
+
+  .next-steps { background: var(--bg-soft); border: 1px solid var(--border); border-left: 3px solid var(--green-mid); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; }
+  .next-steps h2 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--green-deep); margin-bottom: 0.6rem; }
+  .next-steps p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+
+  .form-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; }
+  .form-card h2 { font-family: var(--font-serif); font-size: 1.3rem; color: var(--green-deep); margin-bottom: 0.4rem; }
+  .form-card .form-sub { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.75rem; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label { display: block; font-size: 0.85rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.35rem; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.65rem 0.9rem; border: 1px solid var(--border); border-radius: 8px; background: white; font-family: var(--font-body); font-size: 0.93rem; color: var(--text-primary); outline: none; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green-bright); }
+  .form-group textarea { min-height: 120px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .submit-btn { width: 100%; background: var(--green-mid); color: white; border: none; padding: 0.85rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
+  .submit-btn:hover { background: var(--green-deep); }
+  .form-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; text-align: center; line-height: 1.5; }
+
+  .contact-details { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
+  .contact-chip { background: var(--green-pale); border: 1px solid #c8ead9; border-radius: 8px; padding: 0.75rem 1rem; font-size: 0.88rem; color: var(--green-deep); flex: 1; min-width: 200px; }
+  .contact-chip strong { display: block; font-size: 0.78rem; color: var(--text-muted); font-weight: 500; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .sliding-scale { border-left: 3px solid var(--green-bright); padding: 1rem 1.5rem; background: var(--green-pale); border-radius: 0 var(--radius) var(--radius) 0; margin-bottom: 2.5rem; }
+  .sliding-scale p { font-family: var(--font-serif); font-size: 1rem; color: var(--green-deep); font-style: italic; line-height: 1.7; }
+  .sliding-scale cite { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: normal; }
+
+  .cta-bar { background: var(--green-mid); border-radius: var(--radius); padding: 2rem; text-align: center; }
+  .cta-bar h2 { font-family: var(--font-serif); font-size: 1.3rem; color: #fff; font-weight: 500; margin-bottom: 0.5rem; }
+  .cta-bar p { font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
+  @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } .hero-heading { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-num">OT</span>
+      <span class="hero-badge-text">Expert Guidance<br>For Families</span>
+    </div>
+    <h1 class="hero-heading">Let's Get Started</h1>
+    <p class="hero-sub">Fill out the form below and Julie will be in touch within 48 hours to schedule your free 20-minute intro call. No obligation — just a real conversation.</p>
+  </div>
+
+  <div class="next-steps">
+    <h2>What happens after you submit</h2>
+    <p>Julie personally reviews every inquiry. She will reach out within 48 hours to schedule your free intro call — <span style="white-space:nowrap;">A no-pressure conversation</span> to learn about your child, answer your questions, and see if OT-FamilyCollab is the right fit. If it's not, she'll do her best to point you toward resources that are.</p>
+  </div>
+
+  <div class="contact-details">
+    <div class="contact-chip"><strong>In-Person</strong>Greater Boston &amp; North Shore, Massachusetts</div>
+    <div class="contact-chip"><strong>Virtual</strong>Available to Massachusetts residents</div>
+    <div class="contact-chip"><strong>Email</strong><a href="mailto:julie@ot-familycollab.com" style="color:var(--green-deep); text-decoration:none;">julie@ot-familycollab.com</a></div>
+    <div class="contact-chip"><strong>Response Time</strong>Within 48 hours</div>
+  </div>
+
+  <div class="form-card">
+    <h2>Tell me about your family</h2>
+    <p class="form-sub">The more you can share, the better prepared Julie will be for your intro call.</p>
+
+    <div class="form-row">
+      <div class="form-group"><label>Your First Name *</label><input type="text" placeholder="First name"></div>
+      <div class="form-group"><label>Your Last Name *</label><input type="text" placeholder="Last name"></div>
+    </div>
+    <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com"></div>
+    <div class="form-group"><label>Phone Number (optional)</label><input type="tel" placeholder="For scheduling"></div>
+    <div class="form-group"><label>Child's Name</label><input type="text" placeholder="First name is fine"></div>
+    <div class="form-row">
+      <div class="form-group"><label>Child's Age</label><input type="text" placeholder="e.g. 7 years old"></div>
+      <div class="form-group"><label>Session Preference</label>
+        <select>
+          <option value="">Select one</option>
+          <option>In-person (Greater Boston / North Shore)</option>
+          <option>Virtual</option>
+          <option>Either works for me</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group"><label>Does your child have a current IEP or 504?</label>
+      <select>
+        <option value="">Select one</option>
+        <option>Yes — active IEP with OT services</option>
+        <option>Yes — IEP without OT services</option>
+        <option>Yes — 504 plan</option>
+        <option>No</option>
+        <option>Currently in the evaluation process</option>
+        <option>Not sure</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Is your child currently receiving OT services?</label>
+      <select>
+        <option value="">Select one</option>
+        <option>Yes — through school</option>
+        <option>Yes — private clinic</option>
+        <option>Yes — both school and clinic</option>
+        <option>No — but they have in the past</option>
+        <option>No OT services yet</option>
+      </select>
+    </div>
+    <div class="form-group"><label>What brings you here? What are you hoping for?</label>
+      <textarea placeholder="Tell me about your child — what's been challenging, what you've tried, and what you're hoping consultation might help with. There's no wrong answer here."></textarea>
+    </div>
+
+    <button class="submit-btn">Send My Inquiry to Julie</button>
+    <p class="form-note">Julie personally reads every submission and responds within 48 hours. Your information is kept completely private.</p>
+  </div>
+
+  <div class="sliding-scale">
+    <p>"In this economy, your family comes first. I offer a sliding scale based on financial need — please don't ever let cost be the reason you don't reach out. Just mention it and we'll find a way."</p>
+    <cite>— Julie Elizabeth Driscoll, MA, OTR/L</cite>
+  </div>
+
+  <div class="cta-bar">
+    <h2>Not ready to fill out a form?</h2>
+    <p>That's okay. You can also reach Julie directly at:<br><strong><a href="mailto:julie@ot-familycollab.com" style="color:#fff; text-decoration:underline; white-space:nowrap;">julie@ot-familycollab.com</a></strong></p>
+  </div>
+</div>
+</body>
+</html>

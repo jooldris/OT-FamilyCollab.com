@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Navigating School-Based OT and Your IEP Journey — OT-FamilyCollab</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-deep: #085041; --green-mid: #0F6E56; --green-bright: #1D9E75;
+    --green-light: #E1F5EE; --green-pale: #F2FAF7;
+    --text-primary: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --border: #e0e0e0; --bg: #ffffff; --bg-soft: #fafaf8;
+    --radius: 12px; --font-body: 'DM Sans', sans-serif; --font-serif: 'Lora', serif;
+  }
+  body { font-family: var(--font-body); color: var(--text-primary); background: var(--bg); line-height: 1.7; }
+  .page { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+  .hero { background: var(--green-pale); border-radius: var(--radius); padding: 2.5rem 2rem; margin-bottom: 2.5rem; border: 1px solid #c8ead9; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--green-light); border: 1px solid #b6dfd2; border-radius: 999px; padding: 0.35rem 1rem; margin-bottom: 1.5rem; }
+  .hero-badge-num { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; color: var(--green-mid); line-height: 1; }
+  .hero-badge-text { font-size: 0.78rem; color: var(--green-deep); line-height: 1.3; }
+  .hero-heading { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 500; color: var(--green-deep); line-height: 1.3; margin-bottom: 0.75rem; }
+  .hero-sub { font-size: 0.97rem; color: var(--text-secondary); line-height: 1.75; }
+
+  .promise { background: var(--bg-soft); border: 1px solid var(--border); border-left: 3px solid var(--green-mid); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; }
+  .promise-title { font-size: 0.9rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.6rem; }
+  .promise p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75; }
+
+  .category-section { margin-bottom: 2.5rem; }
+  .section-label { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green-mid); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--green-light); }
+  .topic-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.6rem; overflow: hidden; }
+  .topic-btn { width: 100%; background: var(--bg-soft); border: none; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; color: var(--text-primary); cursor: pointer; text-align: left; gap: 1rem; }
+  .topic-btn .icon { font-size: 1rem; flex-shrink: 0; }
+  .topic-btn .chevron { color: var(--green-bright); font-size: 1.1rem; flex-shrink: 0; transition: transform 0.25s; }
+  .topic-item.open .chevron { transform: rotate(45deg); }
+  .topic-body { display: none; padding: 0.25rem 1.25rem 1.1rem; }
+  .topic-item.open .topic-body { display: block; }
+  .topic-body p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.75rem; }
+  .topic-body ul { list-style: none; }
+  .topic-body li { font-size: 0.9rem; color: var(--text-secondary); padding: 0.3rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 0.6rem; }
+  .topic-body li:last-child { border-bottom: none; }
+  .topic-body li::before { content: '→'; color: var(--green-bright); flex-shrink: 0; }
+
+  .questions-block { margin-bottom: 2.5rem; }
+  .questions-block h2 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .questions-block .intro { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.25rem; }
+  .q-group { margin-bottom: 1.5rem; }
+  .q-group h3 { font-size: 0.88rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.6rem; }
+  .q-pill { background: var(--bg-soft); border: 1px solid var(--border); border-left: 3px solid var(--green-light); border-radius: 0 8px 8px 0; padding: 0.65rem 1rem; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--text-secondary); font-style: italic; line-height: 1.5; }
+
+  .pull-quote { border-left: 3px solid var(--green-bright); margin: 0 0 2.5rem; padding: 1rem 1.5rem; background: var(--green-pale); border-radius: 0 var(--radius) var(--radius) 0; }
+  .pull-quote p { font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.7; color: var(--green-deep); font-style: italic; }
+  .pull-quote cite { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: normal; }
+
+  .cta-bar { background: var(--green-mid); border-radius: var(--radius); padding: 2rem; text-align: center; }
+  .cta-bar h2 { font-family: var(--font-serif); font-size: 1.4rem; color: #fff; font-weight: 500; margin-bottom: 0.6rem; }
+  .cta-bar p { font-size: 0.92rem; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-btn { background: #fff; color: var(--green-deep); border-radius: 8px; padding: 0.75rem 2rem; font-size: 0.95rem; font-weight: 500; font-family: var(--font-body); text-decoration: none; display: inline-block; }
+  .cta-btn:hover { background: var(--green-light); }
+  @media (max-width: 560px) { .hero-heading { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-num">OT</span>
+      <span class="hero-badge-text">Expert Guidance<br>For Families</span>
+    </div>
+    <h1 class="hero-heading">Navigating School-Based OT and Your IEP Journey</h1>
+    <p class="hero-sub">IEP meetings can feel overwhelming, confusing, and even isolating — especially when you're sitting across from a team of professionals who speak a language you haven't been taught. I'm here to change that. With 40 years of experience working alongside educators, school OTs, and families, I can help you build genuine, informed, and productive relationships with every member of your child's school team — the people who show up every single day to support your child. When parents and school teams truly understand each other, children thrive.</p>
+  </div>
+
+  <div class="promise">
+    <p class="promise-title">My approach to school consultation</p>
+    <p>The school professionals on your child's IEP team — the OT, the teachers, the specialists — are dedicated to your child's success. My role is to help you understand their language, appreciate their expertise, and step into that team as an equal, informed partner. Together, you and your child's school team can accomplish far more than either could do alone.</p>
+  </div>
+
+  <!-- Category 1 -->
+  <div class="category-section">
+    <div class="section-label">Understanding the IEP</div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">📋</span> Reading &amp; Understanding OT Reports</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>OT evaluation reports are dense and clinical. I'll help you decode them so you can understand exactly what was found about your child and why it matters.</p>
+        <ul>
+          <li>Decode standardized testing scores and what they mean in real life</li>
+          <li>Understand what each area of assessment is measuring</li>
+          <li>Identify key findings and their connection to your child's daily challenges</li>
+          <li>Know what questions to ask if something is unclear or missing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">🎯</span> OT Goals, Benchmarks &amp; Objectives</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>OT goals on an IEP should be specific, measurable, and directly tied to your child's educational needs. I'll help you evaluate whether they are — and advocate for better ones if they're not.</p>
+        <ul>
+          <li>Understand what makes an OT goal meaningful vs. generic</li>
+          <li>Learn how goals connect to your child's academic performance</li>
+          <li>Know how to ask for goals to be revised or clarified</li>
+          <li>Understand benchmarks and how progress is measured</li>
+          <li>Request and interpret goal data from the school</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">📝</span> Accommodations &amp; Behavioral Supports</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>Accommodations should bridge the gap between your child's challenges and their academic participation. I'll help you understand which ones make sense — and how to ask for them with confidence.</p>
+        <ul>
+          <li>Understand the difference between accommodations and modifications</li>
+          <li>Learn which accommodations are most relevant to OT needs</li>
+          <li>Participate in generating accommodations that are practical and specific</li>
+          <li>Connect behavioral support needs to OT goals on the IEP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 2 -->
+  <div class="category-section">
+    <div class="section-label">Navigating IEP Meetings</div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">🤝</span> Preparing for &amp; Participating in IEP Meetings</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>Walk into your next IEP meeting knowing what to expect, what to ask, and how to advocate clearly for your child — without conflict or confusion.</p>
+        <ul>
+          <li>Know your rights under IDEA before you walk in</li>
+          <li>Understand each person's role at the table</li>
+          <li>Prepare your questions in advance with confidence</li>
+          <li>Push back constructively when something doesn't sit right</li>
+          <li>Understand what you're signing — and what it means</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">💬</span> Building a Relationship with the School OT</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>The best outcomes happen when parents and school OTs work as genuine partners. Here's how to build that relationship — even when the system makes it hard.</p>
+        <ul>
+          <li>How to initiate productive communication with the school OT</li>
+          <li>What to do if your concerns aren't being heard</li>
+          <li>How to request observation of your child's OT sessions</li>
+          <li>Building a collaborative rather than adversarial dynamic</li>
+          <li>When and how to escalate concerns through proper channels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category 3 -->
+  <div class="category-section">
+    <div class="section-label">Understanding What School OT Does</div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">🧩</span> OT Intervention Methods &amp; the Why Behind Them</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>Do you know what your child's school OT is actually doing with them — and why? You should. And you have every right to ask.</p>
+        <ul>
+          <li>Understand the types of OT interventions used in school settings</li>
+          <li>Learn why specific approaches are chosen for specific profiles</li>
+          <li>Know the difference between skill-building and compensation strategies</li>
+          <li>Ask for treatment rationale to be explained in plain language</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="topic-item">
+      <button class="topic-btn" onclick="toggleTopic(this)"><span><span class="icon">🏠</span> Getting Home Carryover from the School OT</span><span class="chevron">+</span></button>
+      <div class="topic-body">
+        <p>School OT happens once or twice a week. What happens the other 165 hours? Learn how to get home strategies from the school OT — and how to actually use them.</p>
+        <ul>
+          <li>Request specific home carryover activities from the school OT</li>
+          <li>Understand how to implement school strategies at home</li>
+          <li>Build a consistent home routine that reinforces school progress</li>
+          <li>Use your OT-FamilyCollab coaching to bridge school and home seamlessly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample Questions -->
+  <div class="questions-block">
+    <h2>Questions Every Parent Should Feel Confident Asking</h2>
+    <p class="intro">These are questions you have every right to raise — and that I'll help you feel prepared to ask.</p>
+
+    <div class="q-group">
+      <h3>About the OT Evaluation</h3>
+      <div class="q-pill">"Can you walk me through what each test measured and what my child's scores mean in everyday terms?"</div>
+      <div class="q-pill">"How does the evaluation connect to the specific challenges we see at home and at school?"</div>
+    </div>
+
+    <div class="q-group">
+      <h3>About IEP Goals</h3>
+      <div class="q-pill">"How does this OT goal connect to my child's academic performance and classroom participation?"</div>
+      <div class="q-pill">"Can you show me the progress data you're collecting on this goal?"</div>
+    </div>
+
+    <div class="q-group">
+      <h3>About OT Sessions</h3>
+      <div class="q-pill">"What specific methods are you using with my child — and what's the evidence behind them for their profile?"</div>
+      <div class="q-pill">"Can I observe a session? I want to understand what you're doing so I can support it at home."</div>
+    </div>
+
+    <div class="q-group">
+      <h3>About Home Carryover</h3>
+      <div class="q-pill">"What are the two or three most important things I can do at home to support what you're working on in school?"</div>
+      <div class="q-pill">"Can you give me a written home program I can follow between sessions?"</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>"You have every right to understand every word of your child's IEP — and every right to ask questions, request changes, and participate fully in the decisions being made about your child's education."</p>
+    <cite>— Julie Elizabeth Driscoll, MA, OTR/L</cite>
+  </div>
+
+  <div class="cta-bar">
+    <h2>Ready to walk into your next IEP meeting prepared?</h2>
+    <p>Julie will help you understand every word of your child's OT plan — and show up at that table as the informed, confident parent your child deserves.</p>
+    <a class="cta-btn" href="get-started.html">Book your free intro call →</a>
+  </div>
+
+</div>
+<script>
+  function toggleTopic(btn) {
+    const item = btn.closest('.topic-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.topic-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
